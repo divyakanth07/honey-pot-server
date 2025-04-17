@@ -153,7 +153,46 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 
+alert dialog
 
+package com.example.alertexample;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import android.content.DialogInterface;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
+public class MainActivity extends AppCompatActivity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		Button btn = findViewById(R.id.button2);
+		btn.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				AlertDialog.Builder builder = new
+				AlertDialog.Builder(MainActivity.this);
+				builder.setTitle("Login Alert").setMessage("Are you Sure you want to Continue").setCancelable(false).setPositiveButton("Yes", new
+				DialogInterface.OnClickListener() {
+					@Override
+					public void onClick(DialogInterface dialogInterface, int i) {
+						Toast.makeText(MainActivity.this, "Selected Option is YES",Toast.LENGTH_SHORT).show();
+					}
+				}).setNegativeButton("No", new DialogInterface.OnClickListener() {
+					@Override
+					public void onClick(DialogInterface dialogInterface, int i) {
+						Toast.makeText(MainActivity.this, "Selected Option is No",Toast.LENGTH_SHORT).show();
+					}
+				});
+				AlertDialog dialog = builder.create();
+				dialog.show();
+}
+});
+} 
+}
 
 
 
