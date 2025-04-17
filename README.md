@@ -1,3 +1,5 @@
+https://codeshare.io/Gbk8v2
+
 # HoneypotPie
 
 HoneypotPie is a simple honeypot implementation written in Python, designed to simulate a vulnerable system that captures and logs interactions with potential attackers. This project creates a mock shell environment, logs credential attempts, and responds to a limited set of commands (like `ls`, `pwd`, and `whoami`). It's ideal for studying and detecting attack patterns, as well as experimenting with network security.
